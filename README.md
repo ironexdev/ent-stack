@@ -4,7 +4,7 @@
 
 ## What is the ENT Stack?
 
-The ENT Stack is a robust, full-stack monorepo that integrates **Express**, **Next.js**, and **TRPC**, offering a streamlined solution for web app development.
+The ENT Stack is a robust, full-stack monorepo starter kit that integrates **Express**, **Next.js**, and **TRPC**, offering a streamlined solution for web app development.
 
 It allows you to build and share code between frontend and backend in a single project while maintaining the flexibility to host them independently.
 
