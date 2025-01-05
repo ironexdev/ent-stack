@@ -10,7 +10,7 @@ It allows you to build and share code between frontend and backend in a single p
 
 ## Getting Started
 
-Get up and running with the [ENT Stack](xy) by following the steps below.
+Get up and running with the [ENT Stack](https://ironexdev.github.io/ent-stack-documentation) by following the steps below.
 
 🚀 To create a new project, run the following command:
 
@@ -18,9 +18,9 @@ Get up and running with the [ENT Stack](xy) by following the steps below.
 pnpm create-ent-stack
 ```
 
-🔧 And then follow the [setup guide](y) to **init local database**, **configure environment**, **install dependencies** and **launch your project**.
+🔧 And then follow the [setup guide](https://ironexdev.github.io/ent-stack-documentation/ent-stack/setup) to **init local database**, **configure environment**, **install dependencies** and **launch your project**.
 
-📄 For more details, check out the [documentation](y).
+📄 For more details, check out the [documentation](https://ironexdev.github.io/ent-stack-documentation/ent-stack/documentation).
 
 ## What's Inside
 
