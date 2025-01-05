@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@backend/*": [
+        "./apps/backend/src/*"
+      ],
+      "@frontend/*": [
+        "./apps/frontend/src/*"
+      ],
+      "@shared/*": [
+        "./packages/shared/src/*"
+      ]
+    },
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "esnext"
+  }
+}

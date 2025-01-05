@@ -1,0 +1,63 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    ".next",
+    "node_modules",
+    "public"
+  ],
+  "scripts": {
+    "dev": "next dev | pino-pretty",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "NODE_ENV=test pnpm exec playwright test",
+    "test-with-trace": "NODE_ENV=test pnpm exec playwright test --trace on",
+    "test-report": "NODE_ENV=test pnpm exec playwright show-report",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
+    "@t3-oss/env-nextjs": "^0.11.1",
+    "@tanstack/react-query": "^5.62.3",
+    "@trpc/client": "^11.0.0-next-beta",
+    "@trpc/react-query": "^11.0.0-next-beta",
+    "@trpc/server": "^11.0.0-next-beta",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "@types/uuid": "^10.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "next": "15.0.4",
+    "nextjs-toploader": "^3.7.15",
+    "pino": "^9.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.0",
+    "react-select": "^5.8.3",
+    "sonner": "^1.7.1",
+    "superjson": "^2.2.2",
+    "tailwind-merge": "^2.5.5",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "uuid": "^11.0.3",
+    "xss": "^1.0.15",
+    "zod": "^3.23.8",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "15.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^3.4.16"
+  }
+}

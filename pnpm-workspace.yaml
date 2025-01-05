@@ -1,0 +1,4 @@
+packages:
+  - "apps/backend"
+  - "apps/frontend"
+  - "packages/shared"

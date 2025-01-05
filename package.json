@@ -1,0 +1,33 @@
+{
+  "name": "ent-stack",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "pnpm run --parallel dev",
+    "start": "pnpm run --parallel start",
+    "lint": "pnpm --filter backend lint && pnpm --filter frontend lint",
+    "format": "pnpm --filter backend lint && pnpm --filter frontend lint",
+    "type-check": "pnpm --filter backend type-check",
+    "backend:dev": "pnpm --filter backend dev",
+    "backend:build": "pnpm --filter backend build",
+    "backend:deploy": "pnpm --filter backend --prod deploy output",
+    "backend:start": "cd deployment/backend && pnpm start",
+    "backend:test": "pnpm --filter backend test",
+    "backend:test-with-trace": "pnpm --filter backend test-with-trace",
+    "backend:test-report": "pnpm --filter backend test-report",
+    "frontend:dev": "pnpm --filter frontend dev",
+    "frontend:build": "pnpm --filter frontend build",
+    "frontend:deploy": "pnpm --filter frontend --prod deploy output",
+    "frontend:start": "cd deployment/frontend && pnpm start",
+    "frontend:test": "pnpm --filter frontend test",
+    "frontend:test-with-trace": "pnpm --filter frontend test-with-trace",
+    "frontend:test-report": "pnpm --filter frontend test-report",
+    "export-messages": "pnpm --filter shared export-messages",
+    "import-messages": "pnpm --filter shared import-messages",
+    "db:generate": "pnpm --filter backend db:generate",
+    "db:migrate": "pnpm --filter backend db:migrate",
+    "db:push": "pnpm --filter backend db:push",
+    "db:studio": "pnpm --filter backend db:studio"
+  }
+}

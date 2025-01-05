@@ -1,0 +1,11 @@
+.env
+.env.*
+.prettierignore
+.prettierrc
+eslintrc.json
+eslint.config.js
+.gitignore
+*.md
+.next
+dist
+node_modules
