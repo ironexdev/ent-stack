@@ -55,6 +55,7 @@
     "eslint": "^9.16.0",
     "eslint-config-next": "15.0.4",
     "eslint-config-prettier": "^9.1.0",
+    "pino-pretty": "^13.0.0",
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",

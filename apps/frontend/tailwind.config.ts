@@ -37,16 +37,16 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        primary: "#222222",
-        input: "#353535",
+        primary: "#232425",
+        input: "#333435",
         button: {
-          primary: "#222222",
-          secondary: "#353535",
-          disabled: "#353535",
+          primary: "#232425",
+          secondary: "#333435",
+          disabled: "#333435",
         },
         select: {
-          primary: "#353535",
-          secondary: "#555555",
+          primary: "#333435",
+          secondary: "#535455",
         },
       },
       backgroundImage: {
@@ -76,11 +76,11 @@ export default {
         "one-col": "1280px",
       },
       placeholderColor: {
-        primary: "#AAAAAA",
+        primary: "#A9AAAB",
         error: "#D1A5FD",
       },
       ringColor: {
-        primary: "#888888",
+        primary: "#878889",
       },
       screens: {
         "mobile-w-xs": {
@@ -110,7 +110,7 @@ export default {
       },
       textColor: {
         primary: "#FFFFFF",
-        secondary: "#888888",
+        secondary: "#878889",
         muted: "#DDDDDD",
         highlight: "#D1A5FD",
         error: "#D1A5FD",
@@ -135,7 +135,7 @@ function buttonAnimationPlugin() {
     addUtilities({
       ".button-animation": {
         border: "none",
-        outline: "#555555 solid 0",
+        outline: "#535455 solid 0",
         outlineOffset: "0",
         transition: "none",
       },

@@ -8,7 +8,7 @@ export default function Logo({ className }: { className?: string }) {
       href="/"
       className={cn("flex h-[25px] items-center justify-center", className)}
     >
-      <div className="mr-2 text-xl">ENT</div>
+      <div className="mr-2 text-xl">ENT Stack</div>
       <img
         src="/static/logo.png"
         alt="Logo"

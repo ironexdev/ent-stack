@@ -67,288 +67,47 @@ export default function PageX() {
         data-testid="main"
       >
         <div className="relative min-h-full w-[1280px] max-w-full">
-          <h1 className="desktop-w-lg:text-6xl desktop-w-md:mt-20 desktop-w-md:leading-tight desktop-w-lg:leading-tight mt-10 text-center text-3xl leading-tight tablet-w:text-5xl tablet-w:leading-tight">
-            <HTML>{t_homeTitle(locale)}</HTML>
-          </h1>
-          <h2 className="desktop-w-lg:text-5xl desktop-w-lg:leading-tight desktop-w-lg:text-10xl mt-5 text-center text-2xl tablet-w:text-3xl">
-            <HTML>{t_homeSubtitle(locale)}</HTML>
-          </h2>
           <img
             src="/static/illustration.png"
             alt={t_homeIllustrationAlt(locale)}
             title={t_homeIllustrationAlt(locale)}
-            className="mx-auto mt-20 w-[200px]"
+            className="mx-auto w-[500px]"
           />
-          <div className="my-20 flex justify-center gap-5">
+          <h1
+            className="desktop-w-lg:text-6xl desktop-w-md:mt-10 desktop-w-md:leading-tight desktop-w-lg:leading-tight mt-10 text-center text-3xl leading-tight tablet-w:text-5xl tablet-w:leading-tight">
+            <HTML>{t_homeTitle(locale)}</HTML>
+          </h1>
+          <h2
+            className="desktop-w-lg:text-5xl desktop-w-lg:leading-tight desktop-w-lg:text-10xl mt-5 text-center text-2xl tablet-w:text-3xl">
+            <HTML>{t_homeSubtitle(locale)}</HTML>
+          </h2>
+          <div className="my-16 flex justify-center gap-5">
             <MyButton
               type="button"
-              className="min-w-[0] mobile-w-sm:min-w-[160px]"
+              className="min-w-[0] mobile-w-sm:min-w-[160px] px-0"
               variant="default"
             >
               <Link
-                href="/"
+                href="https://ironexdev.github.io/ent-stack-documentation/ent-stack/setup"
                 target="_blank"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 h-full w-full justify-center"
                 title={t_homeSetup(locale)}
               >
                 <HTML>{t_homeSetup(locale)}</HTML>
-                <ExternalLinkIcon className="size-4" />
+                <ExternalLinkIcon className="size-4"/>
               </Link>
             </MyButton>
-            <MyButton type="button" variant="menu">
+            <MyButton type="button" variant="menu" className="px-0 w-[200px]">
               <Link
-                href="/"
+                href="https://ironexdev.github.io/ent-stack-documentation/ent-stack/documentation"
                 target="_blank"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 h-full w-full justify-center"
                 title={t_homeDocs(locale)}
               >
                 <HTML>{t_homeDocs(locale)}</HTML>
-                <ExternalLinkIcon className="size-4" />
+                <ExternalLinkIcon className="size-4"/>
               </Link>
             </MyButton>
-          </div>
-          <div className="mx-auto mb-10 max-w-[960px]">
-            <h3 className="desktop-w-lg:text-4xl text-2xl tablet-w:text-3xl">
-              <HTML>{t_homeWhatsInside(locale)}</HTML>
-            </h3>
-            <p className="text-muted desktop-w-lg:text-lg text-md mt-5 text-left">
-              <HTML>{t_homeDesc1(locale)}</HTML>
-            </p>
-            <p className="text-muted desktop-w-lg:text-lg text-md mt-5 text-left">
-              <HTML>{t_homeDesc2(locale)}</HTML>
-            </p>
-            <table className="mt-10 w-full">
-              <thead>
-                <tr className="border-primary border-b">
-                  <th className="w-[50%] p-3">
-                    <HTML>{t_homeToolTech(locale)}</HTML>
-                  </th>
-                  <th className="w-[50%] p-3">
-                    <HTML>{t_homeRole(locale)}</HTML>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://expressjs.com"
-                      title={t_homeTableExpressName(locale)}
-                    >
-                      <HTML>{t_homeTableExpressName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted text-center">
-                    <HTML>{t_homeTableExpressRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://nextjs.org"
-                      title={t_homeTableNextjsName(locale)}
-                    >
-                      <HTML>{t_homeTableNextjsName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted text-center">
-                    <HTML>{t_homeTableNextjsRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://trpc.io"
-                      title={t_homeTableTrpcName(locale)}
-                    >
-                      <HTML>{t_homeTableTrpcName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableTrpcRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableCustomI18nName(locale)}</HTML>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableCustomI18nRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://lucide.dev/guide/packages/lucide-react"
-                      title={t_homeTableLucideName(locale)}
-                    >
-                      <HTML>{t_homeTableLucideName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableLucideRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://orm.drizzle.team"
-                      title={t_homeTableDrizzleName(locale)}
-                    >
-                      <HTML>{t_homeTableDrizzleName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableDrizzleRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://mailslurp.com"
-                      title={t_homeTableMailslurpName(locale)}
-                    >
-                      <HTML>{t_homeTableMailslurpName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableMailslurpRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://www.mysql.com"
-                      title={t_homeTableMysqlName(locale)}
-                    >
-                      <HTML>{t_homeTableMysqlName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableMysqlRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://getpino.io"
-                      title={t_homeTablePinoName(locale)}
-                    >
-                      <HTML>{t_homeTablePinoName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTablePinoRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://playwright.dev"
-                      title={t_homeTablePlaywrightName(locale)}
-                    >
-                      <HTML>{t_homeTablePlaywrightName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTablePlaywrightRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://resend.com"
-                      title={t_homeTableResendName(locale)}
-                    >
-                      <HTML>{t_homeTableResendName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableResendRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://env.t3.gg"
-                      title={t_homeTableT3EnvName(locale)}
-                    >
-                      <HTML>{t_homeTableT3EnvName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableT3EnvRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://tanstack.com/query"
-                      title={t_homeTableTanstackName(locale)}
-                    >
-                      <HTML>{t_homeTableTanstackName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableTanstackRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr className="border-primary border-b">
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://zod.dev"
-                      title={t_homeTableZodName(locale)}
-                    >
-                      <HTML>{t_homeTableZodName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableZodRole(locale)}</HTML>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-3 text-center">
-                    <Link
-                      className="text-muted hover:text-primary hover:underline"
-                      target="_blank"
-                      href="https://zustand-demo.pmnd.rs"
-                      title={t_homeTableZustandName(locale)}
-                    >
-                      <HTML>{t_homeTableZustandName(locale)}</HTML>
-                    </Link>
-                  </td>
-                  <td className="text-muted p-3 text-center">
-                    <HTML>{t_homeTableZustandRole(locale)}</HTML>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </main>
