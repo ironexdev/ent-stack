@@ -15,7 +15,7 @@ Get up and running with the [ENT Stack](https://ironexdev.github.io/ent-stack-do
 To create a new project, run the following command:
 
 ```bash
-pnpm create-ent-stack
+pnpm create ent-stack
 ```
 
 And then follow the 🔧 [setup guide](https://ironexdev.github.io/ent-stack-documentation/ent-stack/setup) to **init local database**, **configure environment**, **install dependencies** and 🚀 **launch your project**.
