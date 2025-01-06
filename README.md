@@ -1,7 +1,7 @@
 # ENT Stack
-
-![ent-title](https://github.com/user-attachments/assets/9b4b4cf5-a2ca-4e9b-b498-3362cc7953b1)
-
+<small>&nbsp;</small>
+[![Foo](https://github.com/user-attachments/assets/9b4b4cf5-a2ca-4e9b-b498-3362cc7953b1)](https://ironexdev.github.io/ent-stack-documentation)
+<small>&nbsp;</small>
 ## What is the ENT Stack?
 
 The ENT Stack is a robust, full-stack monorepo starter kit that integrates **Express 5**, **Next.js 15**, and **TRPC**, offering a streamlined solution for web app development.
