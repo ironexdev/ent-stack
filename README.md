@@ -1,5 +1,11 @@
 # ENT Stack
 
+&nbsp;
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/c3c579a8-6ae8-46cf-a854-46d382473dbc" width="300">
+</p>
+
 ![ent-title](https://github.com/user-attachments/assets/9b4b4cf5-a2ca-4e9b-b498-3362cc7953b1)
 
 ## What is the ENT Stack?
