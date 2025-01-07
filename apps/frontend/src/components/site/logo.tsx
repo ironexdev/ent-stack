@@ -6,7 +6,10 @@ export default function Logo({ className }: { className?: string }) {
     <NavLink
       data-testid="logo"
       href="/"
-      className={cn("flex h-[25px] items-center justify-center", className)}
+      className={cn(
+        "flex h-[25px] items-center justify-center hover:no-underline",
+        className,
+      )}
     >
       <div className="mr-2 text-xl">ENT Stack</div>
       <img

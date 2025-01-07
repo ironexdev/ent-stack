@@ -127,7 +127,12 @@ export default {
       },
     },
   },
-  plugins: [buttonAnimationPlugin(), headerPlugin(), textShadowPlugin()],
+  plugins: [
+    buttonAnimationPlugin(),
+    headerPlugin(),
+    textShadowPlugin(),
+    gradientBorder(),
+  ],
 } satisfies Config
 
 function buttonAnimationPlugin() {
@@ -152,8 +157,8 @@ function buttonAnimationPlugin() {
 function headerPlugin() {
   return plugin(function ({ addUtilities }) {
     const breakpoint = settings.breakpoints.height.md
-    const small = 50
-    const large = 100
+    const small = 60
+    const large = 80
 
     addUtilities({
       ".header-based-h": {
@@ -186,6 +191,20 @@ function textShadowPlugin() {
       },
       ".text-shadow-none": {
         "text-shadow": "none",
+      },
+    })
+  })
+}
+
+function gradientBorder() {
+  return plugin(function ({ addUtilities }) {
+    addUtilities({
+      ".border-fade-header": {
+        borderStyle: "solid",
+        borderWidth: "0 0 1px 0",
+        borderImageSource:
+          "linear-gradient(to right, transparent, #232425, transparent)",
+        borderImageSlice: "1",
       },
     })
   })
