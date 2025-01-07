@@ -1,8 +1,10 @@
 {
+  "author": "Ironex",
   "name": "ent-stack",
+  "description": "The ENT Stack is a robust, full-stack monorepo starter kit that integrates Express 5, Next.js 15, and TRPC, offering a streamlined solution for web app development.",
+  "license": "MIT",
   "version": "1.0.0",
-  "private": true,
-  "packageManager": "pnpm@9.15.0",
+  "type": "module",
   "scripts": {
     "dev": "pnpm run --parallel dev",
     "start": "pnpm run --parallel start",
@@ -29,5 +31,6 @@
     "db:migrate": "pnpm --filter backend db:migrate",
     "db:push": "pnpm --filter backend db:push",
     "db:studio": "pnpm --filter backend db:studio"
-  }
+  },
+  "packageManager": "pnpm@9.15.0"
 }

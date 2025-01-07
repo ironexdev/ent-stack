@@ -1,7 +1,5 @@
 {
   "name": "backend",
-  "version": "1.0.0",
-  "private": true,
   "type": "module",
   "files": [
     "dist",
@@ -23,9 +21,6 @@
     "test-report": "NODE_ENV=test pnpm exec playwright show-report",
     "format": "prettier --write ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@auth/drizzle-adapter": "^1.7.4",
     "@t3-oss/env-core": "^0.11.1",

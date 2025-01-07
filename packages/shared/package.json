@@ -1,17 +1,16 @@
 {
   "name": "shared",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "export-messages": "tsx src/scripts/export-messages.js",
     "import-messages": "tsx src/scripts/import-messages.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "intl-messageformat": "^10.7.8",
+    "jose": "^5.9.6",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.23.8"
+  },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
     "@types/jsonwebtoken": "^9.0.7",
@@ -21,11 +20,5 @@
     "eslint-config-prettier": "^9.1.0",
     "js-yaml": "^4.1.0",
     "prettier": "^3.4.2"
-  },
-  "dependencies": {
-    "intl-messageformat": "^10.7.8",
-    "jose": "^5.9.6",
-    "jsonwebtoken": "^9.0.2",
-    "zod": "^3.23.8"
   }
 }
