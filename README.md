@@ -1,12 +1,16 @@
 # ENT Stack
 
-&nbsp;
-
 <p align="center">
 <img src="https://github.com/user-attachments/assets/c3c579a8-6ae8-46cf-a854-46d382473dbc" width="300">
 </p>
 
 ![ent-title](https://github.com/user-attachments/assets/9b4b4cf5-a2ca-4e9b-b498-3362cc7953b1)
+
+<div align="center">
+  
+[![NPM version][npm-image]][npm-url] [![Setup Guide][setup-guide-image]][setup-guide-url] [![ffn][documentation-image]][documentation-url]
+
+</div>
 
 ## What is the ENT Stack?
 
@@ -47,3 +51,12 @@ For more details, check out the 📄 [documentation](https://ironexdev.github.io
 | [Tanstack Query](https://tanstack.com/query)                   | Async State Management       |
 | [Zod](https://zod.dev)                                         | Validation                   |
 | [Zustand](https://zustand-demo.pmnd.rs)                        | State Management             |
+
+[npm-url]: https://www.npmjs.com/package/create-ent-stack
+[npm-image]: https://img.shields.io/npm/v/create-ent-stack?color=b45bf5&logoColor=0b7285
+
+[setup-guide-url]: https://ironexdev.github.io/ent-stack-documentation/ent-stack/setup/
+[setup-guide-image]: https://img.shields.io/badge/setup_guide-726fff
+
+[documentation-url]: https://ironexdev.github.io/ent-stack-documentation/ent-stack/documentation
+[documentation-image]: https://img.shields.io/badge/documentation-726fff
