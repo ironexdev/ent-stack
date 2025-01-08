@@ -30,13 +30,13 @@ Get up and running with the [ENT Stack](https://ironexdev.github.io/ent-stack-do
 - A Unix-like shell environment (e.g., Bash, Zsh
 </small>
 
-**1/ 🚀 Create your project**
+### 1/ 🚀 Create your project
 
 ```bash
 pnpm create ent-stack
 ```
 
-**2/ 🔥 Setup your project**
+### 2/ 🔥 Setup
 
 ```bash
 pnpm fire
@@ -46,11 +46,29 @@ pnpm fire
 - Creates the database and tables
 - Runs dev environments for both the backend and frontend
 
-Make sure to review the 🔧 [Setup Guide](https://ironexdev.github.io/ent-stack-documentation/ent-stack/setup) after.  
+### Environment Variables
+
+If you ran create and setup scripts, then your application should be running just fine, but email sending and testing won't work until adjust env variables listed below:
+- To enable email sending, you need to **[sign up for a Resend account](https://resend.com/signup)** and set **RESEND_API_KEY**
+- To enable email testing, you need to **[sign up for a Mailslurp account](https://app.mailslurp.com/sign-up)** and set **MAILSLURP_API_KEY**, **MAILSLURP_INBOX_ID** and **MAILSLURP_EMAIL**
+
+Here is the list of values that **MUST BE THE SAME** in both backend and frontend **.env** files:
+
+| Backend       | Frontend                  |
+|---------------|---------------------------|
+| SITE_NAME     | NEXT_PUBLIC_SITE_NAME     |
+| COOKIE_DOMAIN | NEXT_PUBLIC_COOKIE_DOMAIN |
+| BACKEND_URL   | NEXT_PUBLIC_BACKEND_URL   |
+| FRONTEND_URL  | NEXT_PUBLIC_FRONTEND_URL  |
+| JWT_SECRET    | JWT_SECRET                |
+
+**Note:** SERVICE_EMAIL and SECURITY_EMAIL don't need real domains (they are only used in translations).
+
+At this point, your application should be up and running locally. Adjust values, domains, and environment settings as needed.
 
 ## Documentation
 
-For information about ENT Stack features go to the 📄 [Documentation](https://ironexdev.github.io/ent-stack-documentation/ent-stack/documentation).
+For information about ENT Stack features go to the 📄 [Documentation](https://ironexdev.github.io/ent-stack-documentation)
 
 ## What's Inside
 
