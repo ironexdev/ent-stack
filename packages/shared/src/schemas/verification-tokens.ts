@@ -1,4 +1,4 @@
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import { z } from "zod"
 import {
   t_invalidEmail,

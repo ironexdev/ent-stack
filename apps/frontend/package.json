@@ -10,11 +10,12 @@
     "dev": "next dev | pino-pretty",
     "build": "next build",
     "start": "next start",
+    "format": "prettier --write .",
     "lint": "next lint",
+    "type-check": "tsc",
     "test": "NODE_ENV=test pnpm exec playwright test",
     "test-with-trace": "NODE_ENV=test pnpm exec playwright test --trace on",
-    "test-report": "NODE_ENV=test pnpm exec playwright show-report",
-    "format": "prettier --write ."
+    "test-report": "NODE_ENV=test pnpm exec playwright show-report"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

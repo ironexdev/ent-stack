@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import { i18n } from "@frontend/lib/i18n"
 import useLocale from "@frontend/hooks/use-locale"
 import MySelect from "@frontend/components/user-input/my-select"

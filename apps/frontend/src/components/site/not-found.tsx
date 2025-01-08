@@ -3,7 +3,7 @@
 import { logger } from "@frontend/lib/logger"
 import { LoggerErrorEnum } from "@shared/enums/logger-error-enum"
 import Link from "next/link"
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import {
   t_notFoundDescription,
   t_notFoundLink,
@@ -34,7 +34,7 @@ export default function NotFound({
         <h1 className="w-full text-center text-3xl">
           {t_notFoundTitle(locale)}
         </h1>
-        <h2 className="text-secondary mt-10 w-full text-center text-8xl">
+        <h2 className="mt-10 w-full text-center text-8xl text-secondary">
           404
         </h2>
         <p className="mt-10 w-full text-center">

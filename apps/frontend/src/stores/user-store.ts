@@ -2,7 +2,7 @@ import { createStore } from "zustand/vanilla"
 import { useContext } from "react"
 import { useStore } from "zustand"
 import { UserStoreContext } from "@frontend/components/providers/user-store-provider"
-import { SessionType } from "@shared/types/session-type"
+import { type SessionType } from "@shared/types/session-type"
 
 export type UserStoreType = {
   app: {

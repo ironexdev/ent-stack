@@ -1,6 +1,6 @@
 import { usePathname } from "next/navigation"
 import { i18n } from "@frontend/lib/i18n"
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 
 // Always returns locale, if no locale is found then the default locale is returned
 export default function useLocale() {

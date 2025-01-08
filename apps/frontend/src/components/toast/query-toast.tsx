@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 import { ToastEnum } from "@frontend/enums/toast-enum"
 import { useToast } from "@frontend/hooks/use-toast"
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 
 export default function QueryToast({ locale }: { locale: LocaleType }) {
   const toast = useToast({ locale })

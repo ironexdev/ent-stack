@@ -1,4 +1,4 @@
-import { LocaleType, t } from "@shared/i18n/t"
+import { type LocaleType, t } from "@shared/i18n/t"
 
 export function t_notFoundTitle(locale: LocaleType): string {
   const messages = {

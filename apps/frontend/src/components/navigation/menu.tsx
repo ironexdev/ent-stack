@@ -71,12 +71,12 @@ export default function Menu() {
         data-testid="menu"
         ref={menuRef}
         className={cn(
-          `desktop-w-md:w-[400px] fixed bottom-0 right-0 top-0 mx-auto w-[320px] origin-right overflow-y-auto bg-primary transition-transform duration-xs ease-in-out [transform:rotate3d(0,1,0,90deg)]`,
+          `fixed bottom-0 right-0 top-0 mx-auto w-[320px] origin-right overflow-y-auto bg-primary transition-transform duration-xs ease-in-out [transform:rotate3d(0,1,0,90deg)] desktop-w-md:w-[400px]`,
           showMenu && "[transform:rotate3d(0,0,0,0deg]",
         )}
       >
         <div className="flex flex-col justify-center">
-          <div className="desktop-w-md:pl-10 flex items-center justify-between pl-5 pr-3 header-based-h">
+          <div className="flex items-center justify-between pl-5 pr-3 header-based-h desktop-w-md:pl-10">
             <div className="text-sm font-medium text-secondary">
               {t_navMainMenu(locale)}
             </div>
@@ -90,7 +90,7 @@ export default function Menu() {
               <X className="size-[24px]" />
             </MyButton>
           </div>
-          <div className="desktop-w-md:px-5 px-3">
+          <div className="px-3 desktop-w-md:px-5">
             <NavLink
               className="block hover:no-underline"
               href="/"
@@ -161,7 +161,7 @@ export default function Menu() {
             )}
           </div>
           <div className="mt-8 border-y border-b-[#181818] border-t-[#282828]"></div>
-          <div className="desktop-w-md:px-5 px-3">
+          <div className="px-3 desktop-w-md:px-5">
             <div className="flex items-center text-sm font-medium text-secondary header-based-h">
               {t_languageSwitcherTitle(locale)}
             </div>

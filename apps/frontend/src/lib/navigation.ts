@@ -1,4 +1,4 @@
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import { clientEnv } from "@frontend/env/client-env"
 import { routes } from "@frontend/lib/routes"
 

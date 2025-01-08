@@ -1,5 +1,5 @@
 import { toast } from "sonner"
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import Notification from "@frontend/components/toast/notification"
 import { ReactNode } from "react"
 import { Ban, Check, CircleAlert, Info } from "lucide-react"

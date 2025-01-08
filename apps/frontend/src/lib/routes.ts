@@ -1,4 +1,4 @@
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import { i18n } from "@frontend/lib/i18n"
 
 export type RoutesType = Record<string, RouteType>

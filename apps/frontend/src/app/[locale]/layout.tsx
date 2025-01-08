@@ -1,7 +1,7 @@
 import QueryToast from "@frontend/components/toast/query-toast"
 import NextTopLoader from "nextjs-toploader"
 import { i18n } from "@frontend/lib/i18n"
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import { notFound } from "next/navigation"
 import Providers from "@frontend/components/providers/providers"
 import { ReactNode } from "react"
@@ -16,16 +16,17 @@ const font = Readex_Pro({
 
 type LocaleLayoutPropsType = {
   children: ReactNode
-  params: {
+  params: Promise<{
     locale: string
-  }
+  }>
 }
 
 export default async function LocaleLayout({
   children,
   params,
 }: LocaleLayoutPropsType) {
-  const { locale } = await params
+  const resolvedParams = await params
+  const { locale } = resolvedParams
 
   if (!i18n.locales.includes(locale as unknown as LocaleType)) {
     // Needed to handle requests that don't go through middleware (ie /favicon.ico)

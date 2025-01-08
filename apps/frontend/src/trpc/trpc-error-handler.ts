@@ -5,7 +5,7 @@ import {
   trpcClientErrors,
   trpcServerErrors,
 } from "@shared/enums/trpc-error-enum"
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import { ZodError } from "zod"
 
 type FlattenedZodErrorType = ReturnType<ZodError["flatten"]>

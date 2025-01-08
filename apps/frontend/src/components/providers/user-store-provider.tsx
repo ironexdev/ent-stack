@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useState, ReactNode } from "react"
-import { SessionType } from "@shared/types/session-type"
+import { type SessionType } from "@shared/types/session-type"
 import { createUserStore } from "@frontend/stores/user-store"
 
 type UserStoreApiType = ReturnType<typeof createUserStore>

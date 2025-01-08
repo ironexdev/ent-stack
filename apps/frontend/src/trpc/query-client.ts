@@ -9,7 +9,7 @@ import {
   t_clientError,
   t_serverError,
 } from "@shared/i18n/messages/common/t-error"
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import { useToast } from "@frontend/hooks/use-toast"
 import { handleTRPCError } from "@frontend/trpc/trpc-error-handler"
 import { TRPCClientError } from "@trpc/client"

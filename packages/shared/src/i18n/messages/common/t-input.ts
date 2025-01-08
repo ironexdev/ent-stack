@@ -1,4 +1,4 @@
-import { LocaleType, t } from "@shared/i18n/t"
+import { type LocaleType, t } from "@shared/i18n/t"
 import { t_loading } from "@shared/i18n/messages/t-status"
 
 export function t_emailLabel(locale: LocaleType) {

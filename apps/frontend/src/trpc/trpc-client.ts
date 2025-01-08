@@ -1,7 +1,7 @@
 import { createTRPCClient, httpBatchLink } from "@trpc/client"
 import type { AppRouterType } from "@backend/api/trpc/root"
 import SuperJSON from "superjson"
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import { RequestHeaderEnum } from "@shared/enums/request-header-enum"
 import { v4 as uuidv4 } from "uuid"
 import { clientEnv } from "@frontend/env/client-env"

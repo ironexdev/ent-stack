@@ -12,7 +12,7 @@ export default function Header({
     <header
       data-testid="header"
       className={cn(
-        "border-fade-header fixed left-0 right-0 top-0 z-30 mx-auto flex w-full max-w-one-col justify-center bg-primary header-based-h",
+        "fixed left-0 right-0 top-0 z-30 mx-auto flex w-full max-w-one-col justify-center bg-primary header-based-h border-fade-header",
         className,
       )}
     >

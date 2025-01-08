@@ -97,7 +97,7 @@ export default function LoginForm() {
         <div className="mt-8 flex w-full justify-end">
           <NavLink
             href="/login/verification"
-            className="text-secondary text-sm hover:text-primary"
+            className="text-sm text-secondary hover:text-primary"
           >
             {t_alreadyHaveThePin(locale)}
           </NavLink>

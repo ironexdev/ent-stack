@@ -7,19 +7,19 @@
     ".env"
   ],
   "scripts": {
-    "type-check": "tsc",
+    "dev": "NODE_ENV=development tsx watch src/index | pino-pretty --colorize --singleLine",
     "build": "rimraf dist && esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js --packages=external && cp -r src/static dist/static",
     "start": "node dist/index.js",
-    "dev": "NODE_ENV=development tsx watch src/index | pino-pretty --colorize --singleLine",
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
-    "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio",
+    "format": "prettier --write .",
     "lint": "eslint",
+    "type-check": "tsc",
     "test": "NODE_ENV=test pnpm exec playwright test",
     "test-with-trace": "NODE_ENV=test pnpm exec playwright test --trace on",
     "test-report": "NODE_ENV=test pnpm exec playwright show-report",
-    "format": "prettier --write ."
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.7.4",

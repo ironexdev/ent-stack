@@ -3,11 +3,11 @@ import { indexedRoutes, protectedPages } from "@frontend/lib/routes"
 import { i18n } from "@frontend/lib/i18n"
 import { CookieEnum } from "@shared/enums/cookie-enum"
 import AuthService from "@frontend/services/auth-service"
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import { toastQueryParams } from "@frontend/lib/utils"
 import { t_loginRequired } from "@shared/i18n/messages/t-auth"
 import { ToastEnum } from "@frontend/enums/toast-enum"
-import { SessionType } from "@shared/types/session-type"
+import { type SessionType } from "@shared/types/session-type"
 import {
   getLocalizedLoginPathname,
   getLocalizedMyProfilePathname,

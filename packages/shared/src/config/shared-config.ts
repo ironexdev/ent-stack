@@ -1,4 +1,4 @@
-import { LocaleType } from "@shared/i18n/t"
+import { type LocaleType } from "@shared/i18n/t"
 import { LocaleEnum } from "@shared/enums/locale-enum"
 import { EnvironmentEnum } from "@shared/enums/environment-enum"
 import { FrameworkEnum } from "@shared/enums/framework-enum"
@@ -21,7 +21,7 @@ export default class SharedConfig {
         path: "/",
         domain,
         secure: environment !== EnvironmentEnum.DEVELOPMENT,
-        sameSite: "strict" as "strict", // Use this if backend is running on subdomain, ie.: backend.example.com and frontend is running on example.com
+        sameSite: "strict" as const, // Use this if backend is running on subdomain, ie.: backend.example.com and frontend is running on example.com
         maxAge: (this.accessTokenExpirationInMinutes - 1) * 60 * multiplier, // Subtract 1 minute to account for clock skew
       }
     },
@@ -37,7 +37,7 @@ export default class SharedConfig {
         path: "/",
         domain,
         secure: environment !== EnvironmentEnum.DEVELOPMENT,
-        sameSite: "strict" as "strict", // Use this if backend is running on subdomain, ie.: backend.example.com and frontend is running on example.com
+        sameSite: "strict" as const, // Use this if backend is running on subdomain, ie.: backend.example.com and frontend is running on example.com
         maxAge: (this.refreshTokenExpirationInMinutes - 1) * 60 * multiplier, // Subtract 1 minute to account for clock skew
       }
     },

@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Express Node.js TRPC Stack",
     start_url: "/",
     display: "standalone",
-    background_color: "#222222",
-    theme_color: "#222222",
+    background_color: "#171819",
+    theme_color: "#171819",
     icons: [
       {
         src: "/static/web-app-manifest-192x192.png",

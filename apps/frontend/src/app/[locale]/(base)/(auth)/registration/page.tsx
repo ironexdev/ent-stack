@@ -11,7 +11,7 @@ export default function RegistrationPage() {
         <div className="size-[40px]" />
         <Menu />
       </Header>
-      <main className="desktop-w-md:px-10 flex min-h-full w-full flex-col items-center px-5 header-based-pt">
+      <main className="flex min-h-full w-full flex-col items-center px-5 header-based-pt desktop-w-md:px-10">
         <div className="min-h-10 w-full flex-grow-[1]" />
         <div className="relative min-h-full w-[480px] max-w-full">
           <RegistrationForm />
