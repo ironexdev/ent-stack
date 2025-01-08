@@ -20,17 +20,37 @@ It allows you to build and **share code** between frontend and backend in a sing
 
 ## Getting Started
 
-Get up and running with the [ENT Stack](https://ironexdev.github.io/ent-stack-documentation) by following the steps below.
+Get up and running with the [ENT Stack](https://ironexdev.github.io/ent-stack-documentation) in just two steps:
 
-To create a new project, run the following command:
+**Prerequisites**
+<small>
+- Node.js
+- PNPM
+- Docker CLI (for local MySQL database)
+- A Unix-like shell environment (e.g., Bash, Zsh
+</small>
+
+**1/ 🚀 Create your project**
 
 ```bash
 pnpm create ent-stack
 ```
 
-And then follow the 🔧 [setup guide](https://ironexdev.github.io/ent-stack-documentation/ent-stack/setup) to **install dependencies**, **configure environment**, **init local database**, and 🚀 **launch your project**.
+**2/ 🔥 Setup your project**
 
-For more details, check out the 📄 [documentation](https://ironexdev.github.io/ent-stack-documentation/ent-stack/documentation).
+```bash
+pnpm fire
+```
+- Installs dependencies
+- Starts the local database in a Docker container
+- Creates the database and tables
+- Runs dev environments for both the backend and frontend
+
+Make sure to review the 🔧 [Setup Guide](https://ironexdev.github.io/ent-stack-documentation/ent-stack/setup) after.  
+
+## Documentation
+
+For information about ENT Stack features go to the 📄 [Documentation](https://ironexdev.github.io/ent-stack-documentation/ent-stack/documentation).
 
 ## What's Inside
 
