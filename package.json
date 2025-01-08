@@ -6,6 +6,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "init": "pnpm install && bin/docker/run-local-db.sh && pnpm db:push && pnpm dev",
     "dev": "pnpm run --parallel dev",
     "start": "pnpm run --parallel start",
     "format": "pnpm --filter backend format && pnpm --filter frontend format",
