@@ -24,33 +24,50 @@ const protectedPathnameRegex = RegExp(
 export default async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // 1. Handle homepage redirect
-  if (pathname === "/") {
-    const redirectUrl = request.nextUrl.clone()
-    redirectUrl.pathname = `/${i18n.defaultLocale}`
-    return NextResponse.redirect(redirectUrl)
+  // 1. Detect locale
+  const locale = detectLocale(pathname)
+
+  // 2. Rewrite URLs without prefix if there's no locale
+  if (!locale) {
+    const url = request.nextUrl.clone()
+    url.pathname = `/${i18n.defaultLocale}${pathname}`
+    return NextResponse.rewrite(url)
   }
 
-  const routeName = indexedRoutes[pathname]
+  // 3. Redirect URLs with default locale to non-prefixed URLs
+  if (locale === i18n.defaultLocale) {
+    const url = request.nextUrl.clone()
+    url.pathname = pathname.replace(`/${locale}`, "")
+    return NextResponse.redirect(url)
+  }
 
-  // 2. Handle 404
+  // 4. Map to base route; handle 404 if not recognized
+  const cleanedPathname = pathname.replace(/\/$/, "") // remove trailing slash
+  const routeName = indexedRoutes[cleanedPathname]
+
   if (!routeName) {
     const notFoundUrl = request.nextUrl.clone()
-    notFoundUrl.pathname = "/404" // Ensure this matches your custom 404 page route
+    notFoundUrl.pathname = "/404"
     return NextResponse.rewrite(notFoundUrl)
   }
 
-  // 3. Handle rewrite to canonical pathname if needed
-  const response = handleCanonicalRewrite(request, routeName)
+  // 5. Rewrite to actual Next.js route if it's not "/" so Next.js can render the page from e.g. `/registration` or `/login`
+  if (routeName !== "/") {
+    const rewriteUrl = request.nextUrl.clone()
+    rewriteUrl.pathname = `/${i18n.defaultLocale}${routeName}`
+    return NextResponse.rewrite(rewriteUrl)
+  }
 
-  // 4. Detect locale and determine protected/public route
-  const locale = detectLocale(request.nextUrl.pathname)
-  const isProtectedPage = protectedPathnameRegex.test(request.nextUrl.pathname)
+  // 6. Initialize response
+  const response = NextResponse.next()
 
-  // 5. Attempt to authenticate user
+  // 7. Determine if route is protected
+  const isProtectedPage = protectedPathnameRegex.test(pathname)
+
+  // 8. Attempt to authenticate
   const session = await authenticateUser(request, locale, response)
 
-  // 6. Route-level logic
+  // 9. Route-level logic
   if (!isProtectedPage) {
     return handlePublicRoute(request, response, session, locale)
   } else {
@@ -64,38 +81,19 @@ export const config = {
   ],
 }
 
-function detectLocale(pathname: string): LocaleType {
-  const { locales, defaultLocale } = i18n
+function detectLocale(pathname: string): LocaleType | null {
+  const { locales } = i18n
   const firstSegment = pathname.split("/")[1]
-
-  if (locales.includes(firstSegment as LocaleType)) {
-    return firstSegment as LocaleType
-  }
-
-  return defaultLocale
-}
-
-function handleCanonicalRewrite(
-  request: NextRequest,
-  routeName: string,
-): NextResponse {
-  const { pathname } = request.nextUrl
-  const isCanonicalPathname = pathname.endsWith(routeName)
-
-  if (!isCanonicalPathname) {
-    const url = request.nextUrl.clone()
-    url.pathname = `${i18n.defaultLocale}${routeName}`
-    return NextResponse.rewrite(url)
-  } else {
-    return NextResponse.next()
-  }
+  return locales.includes(firstSegment as LocaleType)
+    ? (firstSegment as LocaleType)
+    : null
 }
 
 async function authenticateUser(
   request: NextRequest,
   locale: LocaleType,
   response: NextResponse,
-) {
+): Promise<SessionType | null> {
   const accessToken = request.cookies.get(CookieEnum.ACCESS_TOKEN)?.value
   const refreshToken = request.cookies.get(CookieEnum.REFRESH_TOKEN)?.value
   let session = null
@@ -122,7 +120,7 @@ function handlePublicRoute(
   const localizedLoginPath = getLocalizedLoginPathname(locale)
   const localizedRegistrationPath = getLocalizedRegistrationPathname(locale)
 
-  // Redirect to my-profile if user is logged in and tries to access login/registration
+  // If the user is already logged in, don’t show them login/register pages
   if (
     request.nextUrl.pathname.endsWith(localizedLoginPath) ||
     request.nextUrl.pathname.endsWith(localizedRegistrationPath)

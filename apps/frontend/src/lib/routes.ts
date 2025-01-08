@@ -99,14 +99,26 @@ Object.entries(routes).forEach(([key, value]) => {
   if (typeof value.pathnames === "string") {
     i18n.locales.forEach((locale) => {
       if (key === "/") {
-        indexedRoutes["/" + locale] = `/`
+        if (locale === i18n.defaultLocale) {
+          indexedRoutes["/"] = `/`
+        } else {
+          indexedRoutes["/" + locale] = `/`
+        }
       } else {
-        indexedRoutes["/" + locale + key] = key
+        if (locale === i18n.defaultLocale) {
+          indexedRoutes["/" + key] = key
+        } else {
+          indexedRoutes["/" + locale + key] = key
+        }
       }
     })
   } else {
-    Object.entries(value.pathnames).forEach(([lang, pathname]) => {
-      indexedRoutes["/" + lang + pathname] = key
+    Object.entries(value.pathnames).forEach(([locale, pathname]) => {
+      if (locale === i18n.defaultLocale) {
+        indexedRoutes[pathname] = key
+      } else {
+        indexedRoutes["/" + locale + pathname] = key
+      }
     })
   }
 })
