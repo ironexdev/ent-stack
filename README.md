@@ -18,6 +18,8 @@ The ENT Stack is a robust, full-stack monorepo starter kit that integrates <ins>
 
 It allows you to build and **share code** between frontend and backend in a single project while maintaining the flexibility to **host them separately**.
 
+The stack combines Next.js for its powerful SSR and routing capabilities, Express for its simplicity and flexibility in backend architecture, and TRPC for end-to-end, type-safe API communication without needing a separate schema. It tackles the complex integration of TRPC with Next.js and Express, providing both client and server-side TRPC setups for effortless, type-safe communication across the stack.
+
 ## Getting Started
 
 Get up and running with the [ENT Stack](https://ironexdev.github.io/ent-stack-documentation) in just two steps:
