@@ -22,9 +22,10 @@
         "./packages/shared/src/*"
       ]
     },
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "esnext"
+    "target": "es2017"
   }
 }

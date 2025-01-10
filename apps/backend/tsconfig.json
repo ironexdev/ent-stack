@@ -1,18 +1,12 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "moduleResolution": "bundler",
-    "module": "esnext",
-    "target": "es2022",
-
-    "moduleDetection": "force",
-    "verbatimModuleSyntax": true,
-    "resolveJsonModule": true,
+    "allowImportingTsExtensions": false,
     "lib": ["es2022"],
-
+    "moduleDetection": "force",
     "noEmit": true,
-    "allowImportingTsExtensions": false
+    "outDir": "./dist",
+    "verbatimModuleSyntax": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "tests"]
