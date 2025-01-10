@@ -147,7 +147,3 @@ For information about ENT Stack features go to the 📄 [Documentation](https://
 
 [documentation-url]: https://ironexdev.github.io/ent-stack-documentation/ent-stack/documentation
 [documentation-image]: https://img.shields.io/badge/documentation-726fff
-
-## How To Contribute
-
-- TBD
