@@ -14,6 +14,6 @@ test.describe("Home Page", async () => {
   test("displays main content with the correct title", async ({ page }) => {
     const pageTitle = page.getByTestId("page-title")
     await expect(page.getByTestId("main")).toBeVisible()
-    await expect(pageTitle).toHaveText("Home") // Adjust based on locale
+    await expect(pageTitle).toHaveText("Where Next.js meets Express")
   })
 })

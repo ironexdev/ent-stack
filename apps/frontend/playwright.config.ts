@@ -1,13 +1,14 @@
 import { defineConfig, devices } from "@playwright/test"
+import { configDotenv } from "dotenv"
 
-// dotenv.config()
+configDotenv()
 
 export default defineConfig({
   testDir: "./tests/e2e",
   fullyParallel: true,
   forbidOnly: true,
   retries: 0,
-  workers: 1,
+  workers: "50%",
   reporter: "html",
   use: {
     baseURL: process.env.NEXT_PUBLIC_FRONTEND_URL,

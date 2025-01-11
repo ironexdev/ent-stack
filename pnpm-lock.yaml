@@ -188,6 +188,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
       lucide-react:
         specifier: ^0.468.0
         version: 0.468.0(react@19.0.0)
