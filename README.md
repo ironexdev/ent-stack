@@ -18,6 +18,7 @@
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
+- [Troubleshooting](#troubleshooting)
 
 ## What is the ENT Stack?
 
@@ -119,7 +120,7 @@ pnpm fire
 
 ### Environment Variables
 
-If you ran create and setup scripts, then your application should be running just fine, but email sending and testing won't work until adjust env variables listed below:
+If you ran create and setup scripts, then your application should be running just fine, but email sending and testing won't work until you adjust env variables listed below:
 - To enable email sending, you need to **[sign up for a Resend account](https://resend.com/signup)** and set **RESEND_API_KEY**
 - To enable email testing, you need to **[sign up for a Mailslurp account](https://app.mailslurp.com/sign-up)** and set **MAILSLURP_API_KEY**, **MAILSLURP_INBOX_ID** and **MAILSLURP_EMAIL**
 
@@ -133,7 +134,7 @@ Here is the list of values that **MUST BE THE SAME** in both backend and fronten
 | FRONTEND_URL  | NEXT_PUBLIC_FRONTEND_URL  |
 | JWT_SECRET    | JWT_SECRET                |
 
-**Note:** SERVICE_EMAIL and SECURITY_EMAIL don't need real domains (they are only used in translations).
+**Note:** SERVICE_EMAIL and SECURITY_EMAIL don't need real domains during development as they are only used in translations.
 
 At this point, your application should be up and running locally. Adjust values, domains, and environment settings as needed.
 
@@ -152,8 +153,19 @@ For information about ENT Stack features go to the 📄 [Documentation](https://
 
 ## Troubleshooting
 
+**IDE errors**
+```
+Node interpreter is not set
+Eslint/Prettier is not working
+TypeScript highlights non-existent errors
+```
+- These issues might be occurring specifically in your IDE or operating system. For reference, I’m attaching my PHPStorm (WebStorm) configuration on WSL2 with Ubuntu, showing the settings for ESLint, Prettier, and Node.js.:
+
 **MySQL container name conflict**
-- `docker: Error response from daemon: Conflict. The container name "/mysql" is already in use by container`
+```
+docker: Error response from daemon: Conflict. The container name "/mysql" is already in use by container
+```
 - Remove the existing container by running `docker rm mysql`
-  - Or for more nuclear solution, run `bin/docker/cleanup.sh` - this script forcefully cleans up Docker by removing all build caches, containers, images, and unused networks to free disk space and reset the environment.
+- Or for more nuclear solution, run `bin/docker/cleanup.sh`
+  - this script forcefully cleans up Docker by removing all build caches, containers, images, and unused networks to free disk space and reset the environment.
 
