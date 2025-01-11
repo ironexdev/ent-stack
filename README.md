@@ -102,8 +102,10 @@ Get up and running with the <a href="https://ironexdev.github.io/ent-stack-docum
 ### 1/ 🚀 Create your project
 
 ```bash
-pnpm create ent-stack
+pnpm create ent-stack@latest
 ```
+- Creates a new project (folder) based on specific version of this repository.
+- The version used is specified in the description of the <a href="https://www.npmjs.com/package/create-ent-stack" target="_blank">npm package</a>.
 
 ### 2/ 🔥 Setup
 
