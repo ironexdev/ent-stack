@@ -21,7 +21,7 @@ export default async function MyProfilePage({
       </Header>
       <main className="flex h-full w-full justify-center header-based-pt">
         <div>
-          <LogoutButton />
+          <LogoutButton className="mt-10" />
         </div>
       </main>
     </>

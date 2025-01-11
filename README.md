@@ -121,7 +121,7 @@ pnpm fire
 ### Environment Variables
 
 If you ran create and setup scripts, then your application should be running just fine, but email sending and testing won't work until you adjust env variables listed below:
-- To enable email sending, you need to **[sign up for a Resend account](https://resend.com/signup)** and set **RESEND_API_KEY**
+- To enable email sending, you need to **[sign up for a Resend account](https://resend.com/signup)** and set **SERVICE_EMAIL** and **RESEND_API_KEY**
 - To enable email testing, you need to **[sign up for a Mailslurp account](https://app.mailslurp.com/sign-up)** and set **MAILSLURP_API_KEY**, **MAILSLURP_INBOX_ID** and **MAILSLURP_EMAIL**
 
 Here is the list of values that **MUST BE THE SAME** in both backend and frontend **.env** files:
@@ -133,8 +133,6 @@ Here is the list of values that **MUST BE THE SAME** in both backend and fronten
 | BACKEND_URL   | NEXT_PUBLIC_BACKEND_URL   |
 | FRONTEND_URL  | NEXT_PUBLIC_FRONTEND_URL  |
 | JWT_SECRET    | JWT_SECRET                |
-
-**Note:** SERVICE_EMAIL and SECURITY_EMAIL don't need real domains during development as they are only used in translations.
 
 At this point, your application should be up and running locally. Adjust values, domains, and environment settings as needed.
 
