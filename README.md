@@ -153,15 +153,26 @@ For information about ENT Stack features go to the 📄 [Documentation](https://
 
 ## Troubleshooting
 
-**IDE errors**
+1/ **IDE issues**
 ```
-Node interpreter is not set
-Eslint/Prettier is not working
-TypeScript highlights non-existent errors
+- Node interpreter is not set
+- Eslint/Prettier is not working on save
+- TypeScript highlights non-existent errors
 ```
-- These issues might be occurring specifically in your IDE or operating system. For reference, I’m attaching my PHPStorm (WebStorm) configuration on WSL2 with Ubuntu, showing the settings for ESLint, Prettier, and Node.js.:
+- These issues can occur if your IDE is not properly configured. For reference, I'm attaching my PHPStorm (WebStorm) configuration on WSL2 with Ubuntu, showing the settings for ESLint, Prettier, and Node.js.:
+<table align="center">
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/6b509924-f8a7-4ec3-b569-721784527fc8" width="250" alt="Eslint Settings"/>
+    </td>
+    <td><img src="https://github.com/user-attachments/assets/2d60cea8-f295-4667-a0d8-7553dd863070" width="250" alt="Prettier Settings" />
+    </td>
+    <td><img src="https://github.com/user-attachments/assets/0e42aa53-f420-42ad-85ab-e61881ccc2e9" width="250" alt="Node.js Settings"/>
+    </td>
+  </tr>
+</table>
 
-**MySQL container name conflict**
+2/ **MySQL container name conflict**
 ```
 docker: Error response from daemon: Conflict. The container name "/mysql" is already in use by container
 ```
