@@ -155,6 +155,5 @@ For information about ENT Stack features go to the 📄 [Documentation](https://
 **MySQL container name conflict**
 - `docker: Error response from daemon: Conflict. The container name "/mysql" is already in use by container`
 - Remove the existing container by running `docker rm mysql`
-  - Or for more nuclear solution, run `bin/docker/cleanup.sh`
-    - The script forcefully cleans up Docker by removing all build caches, containers, images, and unused networks to free disk space and reset the environment.
+  - Or for more nuclear solution, run `bin/docker/cleanup.sh` - this script forcefully cleans up Docker by removing all build caches, containers, images, and unused networks to free disk space and reset the environment.
 
