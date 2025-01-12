@@ -80,11 +80,11 @@ export const protectedPages = Object.keys(routes).flatMap((key) => {
  * The indexedRoutes object will contain mappings from localized pathnames back to their route keys.
  * Example of indexedRoutes values:
  * {
- *   "/en": "/",
+ *   "/": "/",
  *   "/cs": "/",
- *   "/en/my-profile": "/my-profile",
+ *   "/my-profile": "/my-profile",
  *   "/cs/muj-profil": "/my-profile",
- *   "/en/login": "/login",
+ *   "/login": "/login",
  *   "/cs/prihlaseni": "/login",
  * }
  *

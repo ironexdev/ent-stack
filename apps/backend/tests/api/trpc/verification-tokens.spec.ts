@@ -23,8 +23,8 @@ test.describe("Verification Tokens Router", () => {
         superjson.serialize({
           email: email,
           action: VerificationActionEnum.REGISTRATION,
-          registrationLink: `${env.FRONTEND_URL}/en/registration`,
-          loginLink: `${env.FRONTEND_URL}/en/login`,
+          registrationLink: `${env.FRONTEND_URL}/registration`,
+          loginLink: `${env.FRONTEND_URL}/login`,
         }),
       )
 
