@@ -51,7 +51,10 @@ export default function PageX() {
             title={t_homeIllustrationAlt(locale)}
             className="mx-auto w-[500px] max-w-[90%]"
           />
-          <h1 className="mt-8 text-center text-3xl leading-tight tablet-w:text-5xl tablet-w:leading-tight desktop-w-md:leading-tight desktop-w-lg:text-6xl desktop-w-lg:leading-tight">
+          <h1
+            data-testid="page-title"
+            className="mt-8 text-center text-3xl leading-tight tablet-w:text-5xl tablet-w:leading-tight desktop-w-md:leading-tight desktop-w-lg:text-6xl desktop-w-lg:leading-tight"
+          >
             <HTML>{t_homeTitle(locale)}</HTML>
           </h1>
           <h2 className="desktop-w-lg:text-10xl mt-5 text-center text-2xl tablet-w:text-3xl desktop-w-lg:text-5xl desktop-w-lg:leading-tight">
