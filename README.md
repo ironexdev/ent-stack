@@ -123,10 +123,31 @@ At this point, your application should be up and running locally. But to enable 
 ### 3/ 🧪 Configure Mailing and Run Tests
 
 To enable mailing, you need to do the following:
-- **[Sign up for a Resend account](https://resend.com/signup)** and set **SERVICE_EMAIL** and **RESEND_API_KEY**
-  - Serves as a service for sending e-mails 
-- **[Sign up for a Mailslurp account](https://app.mailslurp.com/sign-up)** and set **MAILSLURP_API_KEY**, **MAILSLURP_INBOX_ID** and **MAILSLURP_EMAIL**
+- **[Sign up for a free Resend account](https://resend.com/signup)** and set **SERVICE_EMAIL**, **SECURITY_EMAIL** and **RESEND_API_KEY** in `apps/backend/.env`
+  - Serves as a service for sending e-mails
+<table align="center" width="100%">
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/57bc026b-dc0b-4c88-abc6-d4006b9ff8ae" alt="Resend domain" width="100%">
+    </td>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/3b7975a9-8749-4729-97a5-efb136ad3622" alt="Resend API Key" width="100%">
+    </td>
+  </tr>
+</table>
+
+- **[Sign up for a free MailSlurp account](https://app.mailslurp.com/sign-up)** and set **MAILSLURP_API_KEY**, **MAILSLURP_INBOX_ID** and **MAILSLURP_EMAIL** in `apps/backend/.env`
   - Serves as a service for receiving e-mails (for testing purposes)
+<table align="center" width="100%">
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/41affe10-ad42-4d89-a2b3-f69dd8597997" alt="MailSlurp inbox and inbox id" width="100%">
+    </td>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/60f53cd3-bede-4fb0-9175-7be92955a153" alt="MailSlurp API Key" width="100%">
+    </td>
+  </tr>
+</table> 
 
 After that, you can run the tests by executing the following commands:
 - Test Backend
