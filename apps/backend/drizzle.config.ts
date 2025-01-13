@@ -1,5 +1,5 @@
 // Not using env.ts here because of CI/CD
-// If used, then full backend app would have to run in order tu run migrations
+// If used, then full backend app would have to run in order to run migrations
 // import { env } from "@backend/env"
 
 export default {
