@@ -118,11 +118,25 @@ pnpm fire
 - Creates the database and tables
 - Runs dev environments for both the backend and frontend
 
-### Environment Variables
+At this point, your application should be up and running locally. But to enable email sending and testing, you need to follow the final step below.
 
-If you ran create and setup scripts, then your application should be running just fine, but email sending and testing won't work until you adjust env variables listed below:
-- To enable email sending, you need to **[sign up for a Resend account](https://resend.com/signup)** and set **SERVICE_EMAIL** and **RESEND_API_KEY**
-- To enable email testing, you need to **[sign up for a Mailslurp account](https://app.mailslurp.com/sign-up)** and set **MAILSLURP_API_KEY**, **MAILSLURP_INBOX_ID** and **MAILSLURP_EMAIL**
+### 3/ 🧪 Configure Mailing and Run Tests
+
+To enable mailing, you need to do the following:
+- **[Sign up for a Resend account](https://resend.com/signup)** and set **SERVICE_EMAIL** and **RESEND_API_KEY**
+  - Serves as a service for sending e-mails 
+- **[Sign up for a Mailslurp account](https://app.mailslurp.com/sign-up)** and set **MAILSLURP_API_KEY**, **MAILSLURP_INBOX_ID** and **MAILSLURP_EMAIL**
+  - Serves as a service for receiving e-mails (for testing purposes)
+
+After that, you can run the tests by executing the following commands:
+- Test Backend
+```bash
+pnpm test:backend
+```
+- Test Frontend
+```bash
+pnpm test:frontend
+```
 
 Here is the list of values that **MUST BE THE SAME** in both backend and frontend **.env** files:
 
@@ -133,8 +147,6 @@ Here is the list of values that **MUST BE THE SAME** in both backend and fronten
 | BACKEND_URL   | NEXT_PUBLIC_BACKEND_URL   |
 | FRONTEND_URL  | NEXT_PUBLIC_FRONTEND_URL  |
 | JWT_SECRET    | JWT_SECRET                |
-
-At this point, your application should be up and running locally. Adjust values, domains, and environment settings as needed.
 
 ## Documentation
 
