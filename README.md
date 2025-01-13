@@ -152,11 +152,11 @@ To enable mailing, you need to do the following:
 After that, you can run the tests by executing the following commands:
 - Test Backend
 ```bash
-pnpm test:backend
+pnpm backend:test
 ```
 - Test Frontend
 ```bash
-pnpm test:frontend
+pnpm frontend:test
 ```
 
 Here is the list of values that **MUST BE THE SAME** in both backend and frontend **.env** files:
