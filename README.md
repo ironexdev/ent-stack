@@ -90,7 +90,7 @@ It allows you to build and **share code** between frontend and backend in a sing
 
 ## Getting Started
 
-Get up and running with the <a href="https://ironexdev.github.io/ent-stack-documentation" target="_blank">ENT Stack</a> in just two steps:
+Get up and running with the <a href="https://ent-stack.com" target="_blank">ENT Stack</a> in just two steps:
 
 **Prerequisites**
 <small>
@@ -138,15 +138,15 @@ At this point, your application should be up and running locally. Adjust values,
 
 ## Documentation
 
-For information about ENT Stack features go to the 📄 [Documentation](https://ironexdev.github.io/ent-stack-documentation)
+For information about ENT Stack features go to the 📄 [Documentation](https://ent-stack.com/ent-stack/documentation/)
 
 [npm-url]: https://www.npmjs.com/package/create-ent-stack
 [npm-image]: https://img.shields.io/npm/v/create-ent-stack?color=b45bf5&logoColor=0b7285
 
-[setup-guide-url]: https://ironexdev.github.io/ent-stack-documentation/ent-stack/setup/
+[setup-guide-url]: https://ent-stack.com/ent-stack/setup/
 [setup-guide-image]: https://img.shields.io/badge/setup_guide-726fff
 
-[documentation-url]: https://ironexdev.github.io/ent-stack-documentation/ent-stack/documentation
+[documentation-url]: https://ent-stack.com/ent-stack/documentation
 [documentation-image]: https://img.shields.io/badge/documentation-726fff
 
 ## Troubleshooting
