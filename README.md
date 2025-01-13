@@ -149,7 +149,7 @@ To enable mailing, you need to do the following:
   </tr>
 </table> 
 
-After that, you can run the tests by executing the following commands:
+After that, make sure to **restart dev** environment, and then you can run the tests by executing the following commands:
 - Test Backend
 ```bash
 pnpm backend:test
