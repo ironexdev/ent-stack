@@ -93,12 +93,13 @@ It allows you to build and **share code** between frontend and backend in a sing
 Get up and running with the <a href="https://ent-stack.com" target="_blank">ENT Stack</a> in just two steps:
 
 **Prerequisites**
-<small>
 - <a href="https://nodejs.org" target="_blank">Node.js</a>
 - <a href="https://pnpm.io" target="_blank">PNPM</a>
 - <a href="https://docs.docker.com/reference/cli/docker/#option-types" target="_blank">Docker CLI</a> (for local MySQL database)
 - A Unix-like shell environment (e.g., Bash, Zsh)
-</small>
+
+💡 <a href="https://ent-stack.com/ent-stack/setup/#-how-to-install-prerequisites-on-ubuntu-24" target="_blank">How to install prerequisites on Ubuntu 24</a>
+
 
 ### 1/ 🚀 Create your project
 
@@ -173,15 +174,6 @@ Here is the list of values that **MUST BE THE SAME** in both backend and fronten
 
 For information about ENT Stack features go to the 📄 [Documentation](https://ent-stack.com/ent-stack/documentation/)
 
-[npm-url]: https://www.npmjs.com/package/create-ent-stack
-[npm-image]: https://img.shields.io/npm/v/create-ent-stack?color=b45bf5&logoColor=0b7285
-
-[setup-guide-url]: https://ent-stack.com/ent-stack/setup/
-[setup-guide-image]: https://img.shields.io/badge/setup_guide-726fff
-
-[documentation-url]: https://ent-stack.com/ent-stack/documentation
-[documentation-image]: https://img.shields.io/badge/documentation-726fff
-
 ## Troubleshooting
 
 1/ **IDE issues**
@@ -211,3 +203,11 @@ docker: Error response from daemon: Conflict. The container name "/mysql" is alr
 - Or for more nuclear solution, run `bin/docker/cleanup.sh`
   - this script forcefully cleans up Docker by removing all build caches, containers, images, and unused networks to free disk space and reset the environment.
 
+[npm-url]: https://www.npmjs.com/package/create-ent-stack
+[npm-image]: https://img.shields.io/npm/v/create-ent-stack?color=b45bf5&logoColor=0b7285
+
+[setup-guide-url]: https://ent-stack.com/ent-stack/setup/
+[setup-guide-image]: https://img.shields.io/badge/setup_guide-726fff
+
+[documentation-url]: https://ent-stack.com/ent-stack/documentation
+[documentation-image]: https://img.shields.io/badge/documentation-726fff
