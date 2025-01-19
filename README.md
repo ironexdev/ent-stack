@@ -40,27 +40,21 @@ It allows you to build and **share code** between frontend and backend in a sing
 
 - The stack leverages <a href="https://trpc.io" target="_blank">TRPC</a> to create a type-safe bridge between the frontend and backend. This ensures that your IDE automatically provides type hints and autocompletion for API endpoints, eliminating the need for manual type definitions.
 
-🌐 **Translations and Routing (i18n)** 
-  
-  - A custom, lightweight solution handles localization using standalone functions that use <a href="https://unicode-org.github.io/icu/userguide/format_parse/messages" target="_blank">ICU message syntax</a>.
-  - Translation functions can be used anywhere in the stack (both backend and frontend).
-  - The stack includes two scripts for message import and export.
-  - Frontend routes are fully translatable, defined in standalone .ts file, and dynamically evaluated at runtime through <a href="https://nextjs.org" target="_blank">Next.js</a> middleware.
-
-🔒 **Authentication & Authorization**
-
-- The stack provides passwordless registration and login through short verification PINs, secure JWT access tokens, and UUID-based refresh tokens. Additionally, frontend routes can be marked as protected in `routes.ts`, restricting them to authenticated users - this is evaluated in `middleware.ts`.
-
-⚙️ **Environment & Configuration**
+⚙️ **Environment and Configuration**
 
 - Leverages <a href="https://env.t3.gg" target="_blank">T3 Env</a> type-safe environment variables validation in both backend and frontend
 - Contains Shared configuration file `shared-config.ts` that is extended by both Backend `backend-config.ts` and Frontend `frontend-config.ts` files for feature-focused settings
 
-🪵 **Logging**
+🛢️ **Database**
 
-- The stack employs <a href="https://getpino.io" target="_blank">Pino</a> for lightweight and efficient logging across both backend and frontend. Its simple API and minimal overhead ensure clear, structured logs without impacting performance. 
+- The backend uses <a href="https://orm.drizzle.team/" target="_blank">Drizzle ORM</a> for interacting with a <a href="https://www.mysql.com" target="_blank">MySQL</a> database, providing a type-safe and developer-friendly API.
+- It also contains <a href="https://docs.docker.com/reference/cli/docker/#option-types" target="_blank">Docker</a> Image and a script `bin/docker/run-local-db.sh` to run the database locally.
 
-🪲 **Error Handling and Validation**
+🔒 **Authentication and Authorization**
+
+- The stack provides passwordless registration and login through short verification PINs, secure JWT access tokens, and UUID-based refresh tokens. Additionally, frontend routes can be marked as protected in `routes.ts`, restricting them to authenticated users - this is evaluated in `middleware.ts`.
+
+🪲 **Validation and Error Handling**
 
 - The stack uses <a href="https://zod.dev" target="_blank">Zod</a> for consistent input validation across the frontend and backend, integrated with <a href="https://trpc.io" target="_blank">TRPC</a> for type-safe error management.
 - Input is sanitized to prevent injection attacks.
@@ -72,12 +66,18 @@ It allows you to build and **share code** between frontend and backend in a sing
 - Uses <a href="https://zustand-demo.pmnd.rs" target="_blank">Zustand</a> for lightweight, synchronous global state management, delivering a minimal overhead approach for storing and controlling shared data across the application.
 - Uses <a href="https://tanstack.com/query/latest" target="_blank">Tanstack Query</a> for asynchronous data fetching and caching, providing an SSR-friendly solution that keeps the UI and server in sync.
 
-🛢️ **Database**
+🌐 **Internationalization (i18n) and Localization**
 
-- The backend uses <a href="https://orm.drizzle.team/" target="_blank">Drizzle ORM</a> for interacting with a <a href="https://www.mysql.com" target="_blank">MySQL</a> database, providing a type-safe and developer-friendly API.
-- It also contains <a href="https://docs.docker.com/reference/cli/docker/#option-types" target="_blank">Docker</a> Image and a script `bin/docker/run-local-db.sh` to run the database locally.
+- A custom, lightweight solution handles localization using standalone functions that use <a href="https://unicode-org.github.io/icu/userguide/format_parse/messages" target="_blank">ICU message syntax</a>.
+- Translation functions can be used anywhere in the stack (both backend and frontend).
+- The stack includes two scripts for message import (`pnpm import-messages`) and export (`pnpm export-messages`)
+- Frontend routes are fully translatable, defined in standalone .ts file, and dynamically evaluated at runtime through <a href="https://nextjs.org" target="_blank">Next.js</a> middleware.
 
-✉️ **Email Sending**
+🪵 **Logging**
+
+- The stack employs <a href="https://getpino.io" target="_blank">Pino</a> for lightweight and efficient logging across both backend and frontend. Its simple API and minimal overhead ensure clear, structured logs without impacting performance.
+
+✉️ **Mailing**
 
 - integrates <a href="https://resend.com" target="_blank">Resend</a> for developer friendly e-mail sending.
 - Backend also contains email test router for email previews and testing.
@@ -86,7 +86,9 @@ It allows you to build and **share code** between frontend and backend in a sing
 🤖 **Testing**
 
 - The stack uses <a href="https://playwright.dev" target="_blank">Playwright</a> for unified frontend and backend testing, ensuring consistency and reliability.
-- <a href="https://malslurp.dev" target="_blank">Mailslurp</a> is used for comprehensive email testing, verifying email workflows and content.
+- <a href="https://malslurp.dev" target="_blank">Mailslurp</a> is used for receiving e-mails in tests.
+
+🐳 DevOPS - Infrastructure and CI/CD
 
 ## Getting Started
 
@@ -99,7 +101,6 @@ Get up and running with the <a href="https://ent-stack.com" target="_blank">ENT 
 - A Unix-like shell environment (e.g., Bash, Zsh)
 
 💡 <a href="https://ent-stack.com/ent-stack/setup/#-how-to-install-prerequisites-on-ubuntu-24" target="_blank">How to install prerequisites on Ubuntu 24</a>
-
 
 ### 1/ 🚀 Create your project
 

@@ -7,7 +7,7 @@ export const users = mysqlTable("users", {
     .notNull()
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
-  email: varchar("email", { length: 255 }).notNull(),
+  email: varchar("email", { length: 255 }).notNull().unique(),
   emailVerified: timestamp("email_verified", {
     mode: "date",
     fsp: 3,

@@ -19,7 +19,7 @@ export const refreshTokens = mysqlTable(
     updatedAt: timestamp("updated_at").onUpdateNow(),
   },
   (rt) => ({
-    userIdIdx: index("rt_user_id_id-x").on(rt.userId),
+    userIdCodeIdx: index("rt_user_id_code_idx").on(rt.userId, rt.code),
   }),
 )
 
