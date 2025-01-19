@@ -126,7 +126,7 @@ function writeMessagesToFile(
   }
 
   // Convert messages object to YAML
-  // Since we removed outer quotes, yaml.dump should represent them without extra quotes
+  // Since outer quotes were removed, yaml.dump should represent them without extra quotes
   const yamlContent = yaml.dump(messages, { lineWidth: -1 })
 
   fs.writeFileSync(outputFilePath, yamlContent, "utf8")
