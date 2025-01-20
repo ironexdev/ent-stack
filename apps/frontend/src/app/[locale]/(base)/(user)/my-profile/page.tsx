@@ -7,7 +7,7 @@ import { type LocaleType } from "@shared/i18n/t"
 export default async function MyProfilePage({
   params,
 }: {
-  params: { locale: LocaleType }
+  params: Promise<{ locale: LocaleType }>
 }) {
   const { locale } = await params
 
