@@ -3,7 +3,7 @@ import express from "express"
 import { appRouter } from "@backend/api/trpc/root"
 import * as trpcExpress from "@trpc/server/adapters/express"
 import { createTRPCContext } from "@backend/api/trpc/trpc"
-import { localeFromReq } from "@backend/lib/utils"
+import { localeFromReq, resolvePath } from "@backend/lib/utils"
 import pino, { type Logger } from "pino"
 import pinoHttp from "pino-http"
 import { IncomingMessage } from "http"
@@ -22,13 +22,8 @@ import { RequestHeaderEnum } from "@shared/enums/request-header-enum"
 import { LoggerErrorEnum } from "@shared/enums/logger-error-enum"
 import { env } from "@backend/env"
 import { LogLevelEnum } from "@shared/enums/log-level-enum"
-import { fileURLToPath } from "url"
-import { dirname } from "path"
 import { db } from "@backend/database"
 import { sql } from "drizzle-orm"
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
 
 const port = env.PORT
 
@@ -73,7 +68,7 @@ app.use(
 app.use(cookieParser())
 
 // Public files
-app.use(express.static(`${__dirname}/static/public`))
+app.use(express.static(resolvePath("static/public")))
 
 // Index route
 app.get(

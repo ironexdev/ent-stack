@@ -91,7 +91,7 @@ export default class EmailTemplateService {
     },
   ): Promise<CompiledTemplateResultType> {
     return await TemplateService.compileTemplate(
-      "login-email.hbs",
+      "registration-email.hbs",
       BackendConfig.emailTemplatesDirectory,
       {
         siteName: env.SITE_NAME,
