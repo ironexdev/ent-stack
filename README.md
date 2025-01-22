@@ -138,7 +138,7 @@ To enable mailing, you need to do the following:
   </tr>
 </table>
 
-- **[Sign up for a free MailSlurp account](https://app.mailslurp.com/sign-up)** and set **MAILSLURP_API_KEY**, **MAILSLURP_INBOX_ID** and **MAILSLURP_EMAIL** in `apps/backend/.env`
+- **[Sign up for a free MailSlurp account](https://app.mailslurp.com/sign-up)** and set **MAILSLURP_INBOX_ID** and **MAILSLURP_EMAIL** in `apps/backend/.env`
   - Serves as a service for receiving e-mails (for testing purposes)
 <table align="center" width="100%">
   <tr>

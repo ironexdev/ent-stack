@@ -25,7 +25,6 @@ export const env = createEnv({
     SECURITY_EMAIL: z.string().email(),
     COOKIE_DOMAIN: z.string().min(1),
     LOG_LEVEL: z.nativeEnum(LogLevelEnum),
-    MAILSLURP_API_KEY: z.string().min(1),
     MAILSLURP_INBOX_ID: z.string().min(1),
     MAILSLURP_EMAIL: z.string().email(),
   },
