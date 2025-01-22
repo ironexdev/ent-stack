@@ -22,7 +22,7 @@ export default class EmailService {
     text: string,
     html?: string,
   ) {
-    const mailslurp = new MailSlurp({
+    const mailslurp = new MailSlurp.default({
       apiKey: env.MAILSLURP_API_KEY,
     })
 
@@ -43,9 +43,10 @@ export default class EmailService {
     text: string,
     html?: string,
   ): Promise<void> {
-    const from = `${env.SITE_NAME} <${env.SERVICE_EMAIL}>`
-
     if (env.NODE_ENV === EnvironmentEnum.TEST) {
+      // Can be changed to SERVICE_EMAIL even during tests, but the email needs to be verified first (https://app.mailslurp.com/email-validation)
+      // Requires paid subscription
+      const from = `${env.SITE_NAME} <${env.MAILSLURP_EMAIL}>`
       const [error] = await this.sendTestEmail(from, to, subject, text, html)
 
       if (error) {
@@ -58,6 +59,8 @@ export default class EmailService {
 
       return
     }
+
+    const from = `${env.SITE_NAME} <${env.SERVICE_EMAIL}>`
 
     const { error } = await mailer.emails.send({
       from,
