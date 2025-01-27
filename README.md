@@ -88,8 +88,9 @@ It allows you to build and **share code** between frontend and backend in a sing
 - The stack uses <a href="https://playwright.dev" target="_blank">Playwright</a> for unified frontend and backend testing, ensuring consistency and reliability.
 - <a href="https://malslurp.dev" target="_blank">Mailslurp</a> is used for receiving e-mails in tests.
 
-🐳 DevOPS - Infrastructure and CI/CD
+🐳 **DevOPS - Infrastructure and CI/CD**
 
+- Example Infrastructure and CI/CD for the ENT Stack is in a <a href="https://github.com/ironexdev/ent-stack-devops" target="_blank">separate repository</a>.
 ## Getting Started
 
 Get up and running with the <a href="https://ent-stack.com" target="_blank">ENT Stack</a> in just two steps:
