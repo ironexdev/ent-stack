@@ -1,0 +1,8 @@
+- Upgrade to React 19 when Expo supports it
+- Adjust TRPC client for the mobile app
+- Figure out how to handle html in translations across frontend and mobile apps
+  - A/ Tailwind -> NativeWind, use react-native-render
+  - B/ Use custom syntax for html/native styling
+- TS ESM metro.config https://github.com/facebook/metro/issues/916
+- Babel config ts is probably possible, but not worth the extra step/s
+- Ignore expo-env.d.ts (?)

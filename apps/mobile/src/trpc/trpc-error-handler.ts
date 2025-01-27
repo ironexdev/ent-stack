@@ -1,9 +1,8 @@
 import { TRPCClientError } from "@trpc/client"
 import type { AppRouterType } from "@backend/api/trpc/root"
-import { type LocaleType } from "@shared/i18n/t"
+import { createTRPCErrorHandler } from "@shared/trpc/create-trpc-error-handler"
 import { ZodError } from "zod"
 import { TRPCErrorEnum } from "@shared/enums/trpc-error-enum"
-import { createTRPCErrorHandler } from "@shared/trpc/create-trpc-error-handler"
 
 type FlattenedZodErrorType = ReturnType<ZodError["flatten"]>
 type TrpcErrorCallbacksType = {
@@ -23,7 +22,7 @@ type TrpcErrorCallbacksType = {
 
 export function handleTRPCError(
   error: TRPCClientError<AppRouterType>,
-  locale: LocaleType,
+  _locale: string, // e.g. "en"
   callbacks: TrpcErrorCallbacksType = {},
 ) {
   const baseHandler = createTRPCErrorHandler()

@@ -26,6 +26,7 @@
     "frontend:test": "pnpm --filter frontend test",
     "frontend:test-with-trace": "pnpm --filter frontend test-with-trace",
     "frontend:test-report": "pnpm --filter frontend test-report",
+    "mobile:dev": "pnpm --filter mobile dev",
     "export-messages": "pnpm --filter shared export-messages",
     "import-messages": "pnpm --filter shared import-messages",
     "db:generate": "pnpm --filter backend db:generate",

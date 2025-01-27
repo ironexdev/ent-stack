@@ -18,6 +18,9 @@
       "@frontend/*": [
         "./apps/frontend/src/*"
       ],
+      "@mobile/*": [
+        "./apps/mobile/src/*"
+      ],
       "@shared/*": [
         "./packages/shared/src/*"
       ]
