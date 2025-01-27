@@ -1,4 +1,4 @@
-import { trpcClientReact } from "@frontend/trpc/trpc-client-react"
+import { trpcClientReact } from "@mobile/trpc/trpc-client-react"
 import { SecondsEnum } from "@shared/enums/seconds-enum"
 
 export default function useGetUser() {

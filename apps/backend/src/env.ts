@@ -29,5 +29,6 @@ export const env = createEnv({
     MAILSLURP_EMAIL: z.string().email(),
   },
   runtimeEnv: process.env,
+  skipValidation: false,
   emptyStringAsUndefined: true,
 })
