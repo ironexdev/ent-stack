@@ -1,22 +1,10 @@
-import { cn } from "@frontend/lib/utils"
-import NavLink from "@frontend/components/navigation/nav-link"
+import { Link } from "expo-router"
+import { Text } from "react-native"
 
-export default function Logo({ className }: { className?: string }) {
+export default function Logo() {
   return (
-    <NavLink
-      data-testid="logo"
-      href="/"
-      className={cn(
-        "flex h-[25px] items-center justify-center hover:no-underline",
-        className,
-      )}
-    >
-      <div className="mr-2 text-xl">ENT Stack</div>
-      <img
-        src="/static/logo.png"
-        alt="Logo"
-        className="max-h-full max-w-full"
-      />
-    </NavLink>
+    <Link href="/" className="flex-row items-center">
+      <Text>ENT Stack</Text>
+    </Link>
   )
 }

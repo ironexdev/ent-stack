@@ -7,7 +7,6 @@ import {
   t_homeDocs,
   t_homeIllustrationAlt,
 } from "@shared/i18n/messages/t-home"
-
 import Header from "@frontend/components/layout/header"
 import Menu from "@frontend/components/navigation/menu"
 import Logo from "@frontend/components/site/logo"
@@ -17,7 +16,7 @@ import Link from "next/link"
 import MyButton from "@frontend/components/user-input/my-button"
 import { ExternalLinkIcon } from "lucide-react"
 
-export default function PageX() {
+export default function HomePage() {
   const locale = useLocale()
 
   return (
