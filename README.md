@@ -22,7 +22,7 @@
 
 ## What is the ENT Stack?
 
-The ENT Stack is a robust, full-stack monorepo starter kit that integrates <ins>**E**</ins>xpress 5, <ins>**N**</ins>ext.js 15, and <ins>**T**</ins>RPC, offering a streamlined solution for web app development.
+The ENT Stack is a full-stack TypeScript project starter that integrates <ins>**E**</ins>xpress 5, <ins>**N**</ins>ext.js 15, and <ins>**T**</ins>RPC.
 
 It allows you to build and **share code** between frontend and backend in a single project while maintaining the flexibility to **host them separately**.
 
